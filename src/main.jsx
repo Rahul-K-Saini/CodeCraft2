@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
 import EditorMain from "./components/WebEditor/EditorMain"
+import Programming from './components/Programming/Programming'
 import Home from './components/Home/Home'
 import { RouterProvider } from 'react-router-dom'
 import { Route, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
@@ -12,7 +13,7 @@ const router = createBrowserRouter(
     <Route path='/' element={<App/>}>
       <Route path='' element={<Home/>}/>
       <Route path='web' element={<EditorMain/>}/>
-      {/* <Route path='programming' element={<Programming/>}/> */}
+      <Route path='programming' element={<Programming/>}/>
     </Route>
   )
 )

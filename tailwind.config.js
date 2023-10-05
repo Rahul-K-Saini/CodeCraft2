@@ -6,7 +6,14 @@ export default {
   ],
   darkMode:"class",
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'electric-blue': '#007BFF',
+        'crimson-red': '#DC143C',
+        'lime-green': '#32CD32',
+        'sunshine-yellow': '#FFD700',
+      },
+    },
   },
   plugins: [],
 }
