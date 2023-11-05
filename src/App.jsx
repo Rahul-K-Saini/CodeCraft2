@@ -2,10 +2,10 @@ import { Outlet } from "react-router"
 import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
 import { ContextProvider } from "./context/theme"
-import { useState,useEffect } from "react"
+import { useState, useEffect } from "react"
 
 function App() {
-    const [theme, setTheme] = useState('light')
+    const [theme, setTheme] = useState('dark')
 
     const darkMode = () => {
         setTheme('dark');
@@ -24,9 +24,9 @@ function App() {
     return (
         <>
             <ContextProvider value={{ theme, darkMode, lightMode }}>
-                <Header />
-                <Outlet />
-                <Footer />
+                    <Header />
+                    <Outlet />
+                    <Footer />
             </ContextProvider>
         </>
     )

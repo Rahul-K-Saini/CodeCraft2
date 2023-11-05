@@ -28,7 +28,7 @@ export default function CodeEditor({ onRunClick }) {
     const editorRef = useRef(null);
     const [htmlValue, setHtmlValue] = useState('');
     const [cssValue, setCssValue] = useState('');
-    const [jsValue, setJsValue] = useState('');
+    const [jsValue, setJsValue] = useState('')
 
     useEffect(() => {
         const storedHtmlValue = localStorage.getItem('htmlValue');
