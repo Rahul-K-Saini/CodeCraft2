@@ -9,9 +9,9 @@ const app = express();
 
 const PORT = process.env.PORT || 5000;
 
-const allowedOrigins = ['http://localhost:5174', 'http://localhost:5174', 'https://codecraft-2.netlify.app/'];
+const allowedOrigins = ['https://codecraft-2.netlify.app/', 'http://localhost:5173'];
 const corsOptions = {
-  origin: allowedOrigins,
+  origin: 'https://codecraft-2.netlify.app/',
   credentials: true,
 };
 
@@ -21,7 +21,7 @@ app.use(cors(corsOptions));
 app.use(express.json())
 
 app.listen(PORT,()=>{
-    console.log("chl gya");
+    console.log("chl gya "+ PORT);
 })
 
 app.use(express.urlencoded({extended:true}));
