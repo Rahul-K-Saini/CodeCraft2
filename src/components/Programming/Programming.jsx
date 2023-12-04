@@ -34,6 +34,9 @@ function Programming() {
         }
     }
 
+
+
+    // Default code snippets for each language
     useEffect(() => {
         switch (language) {
             case 'cpp':

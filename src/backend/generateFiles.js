@@ -10,7 +10,6 @@ if(!fs.existsSync(dirCodes)){
     fs.mkdirSync(dirCodes,{recursive:true});
 }
 
-
 export const generateFiles = async (format, code)=>{
     let jobId = v4();
     if(format == "java") {
