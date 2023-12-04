@@ -45,7 +45,7 @@ function FileButtons({ setFileName, fileName,handleRunClick }) {
                 <BiLogoJavascript style={iconStyle} />
                 script.js
             </button>
-            <button className='px-6 py-2 my-1 rounded  bg-green-400 hover:bg-green-500' onClick={handleRunClick}>Run<RiArrowRightSLine style={iconStyle}/></button>
+            <button className='px-5 py-2 my-1 rounded  bg-green-400 hover:bg-green-500' onClick={handleRunClick}>Run<RiArrowRightSLine style={iconStyle}/></button>
         </div>
     )
 }

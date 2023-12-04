@@ -4,7 +4,7 @@ import ThemeButton from '../Buttons/ThemeButton';
 
 const styles ={
     active:" dark:bg-red-500 bg-yellow-500 border-dashed border-2  p-2 px-3  rounded-sm ",
-    notActive:" border-2 dark:hover: border-dashed border-red-500  p-2 px-3 rounded-sm" // here fix the styling for hover very Important
+    notActive:" border-2 dark:border-red-500 border-yellow-500 hover:border-dashed  p-2 px-3 rounded-sm" // here fix the styling for hover very Important
 }
 
 const Header = () => {

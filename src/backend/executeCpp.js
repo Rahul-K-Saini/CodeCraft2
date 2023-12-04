@@ -18,15 +18,18 @@ const executeCpp = (filepath) => {
   const outPath = path.join(outputPath, `${jobId}.exe`);
 
   const promise1 = new Promise((resolve, reject) => {
-      exec(
-          `g++ ${filepath} -o ${outPath} && cd ${outputPath} && .\\${jobId}.exe`,
-          (error, stdout, stderr) => {
-              error && reject(error,stderr);
-              stderr && reject(stderr);
-              resolve(stdout)
-          }
-      );
-  });
+    exec(
+        `g++ ${filepath} -o ${outPath} && cd ${outputPath} && .\\${jobId}.exe`,
+        (error, stdout, stderr) => {
+            if (error) {
+                reject(error, stderr);
+            } else {
+                resolve(stdout.replace(/\n/g, '\n'));
+            }
+        }
+    );
+});
+
 
   promise1.catch((error) => {
       console.error(error);

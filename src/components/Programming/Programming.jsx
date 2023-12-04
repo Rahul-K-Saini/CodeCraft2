@@ -1,5 +1,6 @@
 import { Editor } from "@monaco-editor/react";
 import useTheme from "../../context/theme";
+import {RiArrowRightSLine} from 'react-icons/ri';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -15,6 +16,10 @@ function Programming() {
         setCode(value);
     };
 
+    const iconStyle = {
+        display:"inline",
+    }
+
     const handleSubmit = async () => {
         const payload = {
             language: language,
@@ -29,7 +34,6 @@ function Programming() {
         }
     }
 
-    // Default code snippets for each language
     useEffect(() => {
         switch (language) {
             case 'cpp':
@@ -50,9 +54,11 @@ function Programming() {
     return (
         <div className="flex">
             <div>
-                <div>
-                    <label htmlFor="lang">Language:</label>
+                <div className="flex justify-between bg-[rgb(231,233,235)]  px-4 items-center dark:bg-[rgb(80,90,100)]">
+                    <div>
+                    <label className="dark:text-white " htmlFor="lang">Language: </label>
                     <select
+                        className="dark:bg-gray-300"
                         id='lang'
                         value={language}
                         onChange={(e) => {
@@ -63,8 +69,9 @@ function Programming() {
                         <option value='py'>Python</option>
                         <option value='java'>Java</option>
                     </select>
+                    </div>
+            <button className='px-5 py-2 my-1 rounded  bg-green-400 hover:bg-green-500' onClick={handleSubmit} >Run<RiArrowRightSLine style={iconStyle}/></button>
                 </div>
-                <button onClick={handleSubmit}>Run</button>
                 <Editor
                     height="94vh"
                     width="50vw"
