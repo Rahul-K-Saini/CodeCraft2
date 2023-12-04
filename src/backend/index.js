@@ -9,7 +9,13 @@ const app = express();
 
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({origin:'http://localhost:5173',credentials:true}));
+const allowedOrigins = ['http://localhost:5174', 'http://localhost:5174', 'https://codecraft-2.netlify.app/'];
+const corsOptions = {
+  origin: allowedOrigins,
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 
 
 app.use(express.json())
