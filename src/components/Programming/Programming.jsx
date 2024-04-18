@@ -26,7 +26,7 @@ function Programming() {
             code
         };
         try {
-            const output = await axios.post("https://codecraft-be.onrender.com/run", payload);
+            const output = await axios.post("https://codecraft-0-0-1.onrender.com/run", payload);
             console.log(output);
             const { data } = output;
             setData(data.output);
