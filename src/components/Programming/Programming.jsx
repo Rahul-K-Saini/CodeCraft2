@@ -70,6 +70,8 @@ function Programming() {
                         }}
                     >
                         <option value='py'>Python</option>
+                        <option value='cpp'>C++</option>
+                        <option value='java'>Java</option>
                     </select>
                     </div>
             <button className='px-5 py-2 my-1 rounded  bg-green-400 hover:bg-green-500' onClick={handleSubmit} >Run<RiArrowRightSLine style={iconStyle}/></button>
