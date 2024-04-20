@@ -27,6 +27,7 @@ function Programming() {
         };
         try {
             const output = await axios.post("http://localhost:5000/run", payload);
+            console.log(output);
             const { data } = output;
             setData(data.output);
         } catch (err) {
