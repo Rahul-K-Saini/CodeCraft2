@@ -27,6 +27,11 @@ const Header = () => {
                     }>
                         Language Editor
                     </NavLink>
+                    <NavLink to="convert" className={({ isActive }) =>
+                        isActive ? styles.active: styles.notActive
+                    }>
+                        Code Converter
+                    </NavLink>
                 </div>
                 <div>
                     <ThemeButton />

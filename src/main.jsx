@@ -7,6 +7,7 @@ import Programming from './components/Programming/Programming'
 import Home from './components/Home/Home'
 import { RouterProvider } from 'react-router-dom'
 import { Route, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
+import Convert from "./components/CodeConverter/CodeConverter"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +15,7 @@ const router = createBrowserRouter(
       <Route path='' element={<Home/>}/>
       <Route path='web' element={<EditorMain/>}/>
       <Route path='programming' element={<Programming/>}/>
+      <Route path="convert" element={<Convert/>}/>
     </Route>
   )
 )
