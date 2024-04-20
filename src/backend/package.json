@@ -5,12 +5,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "build":"npm i"
+    "start": "nodemon index.js",
+    "build": "npm i"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google/generative-ai": "^0.7.1",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "url": "^0.11.3",
