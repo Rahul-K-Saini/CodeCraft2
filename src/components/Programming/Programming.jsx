@@ -8,7 +8,7 @@ function Programming() {
     const { theme } = useTheme();
     const [code, setCode] = useState("");
     const [data, setData] = useState('');
-    const [language, setLanguage] = useState('cpp');
+    const [language, setLanguage] = useState('py');
 
     const editorTheme = theme === 'dark' ? 'vs-dark' : 'vs-light';
 
@@ -68,8 +68,8 @@ function Programming() {
                             setLanguage(e.target.value);
                         }}
                     >
-                        <option value='cpp'>C++</option>
                         <option value='py'>Python</option>
+                        <option value='cpp'>C++</option>
                         <option value='java'>Java</option>
                     </select>
                     </div>
