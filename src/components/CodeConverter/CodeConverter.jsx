@@ -45,15 +45,16 @@ function CodeConverter() {
     };
 
     try {
-      const res = await axios.post("http://localhost:5000/convert", data, {
+      const res = await axios.post("https://codecraft2-sak0.onrender.com/convert", data, {
         headers,
       });
-
+      console.log(res);
       setConvertedCode(res.data.convertedText);
     } catch (error) {
       console.log(error);
+      setConvertedCode(error)
     } finally {
-      setLoading(false);
+      setLoading(false);  
     }
   };
 
