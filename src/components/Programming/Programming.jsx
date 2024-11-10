@@ -44,7 +44,7 @@ function Programming() {
                 setCode('#include <iostream>\nusing namespace std;\n\nint main() {\n    // Your C++ code here\n    return 0;\n}');
                 break;
             case 'py':
-                setCode('# Your Python code here');
+                setCode('#Initial request may take time due to cold start Write your Python code below');
                 break;
             case 'java':
                 setCode('//public class should be CodeCraft \npublic class CodeCraft {\n    public static void main(String[] args) {\n        // Your Java code here\n    }\n}');
